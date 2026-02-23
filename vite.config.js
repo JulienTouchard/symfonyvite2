@@ -5,14 +5,14 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   root: "assets",
-  base: "/build/",
+  base: "/",
   build: {
-    outDir: "../public/build",
+    outDir: "../assets/components",
     emptyOutDir: true,
     manifest: true,
     rollupOptions: {
       input: {
-        app: "assets/main.jsx",
+        app: "./main.jsx",
       },
     },
   },

@@ -18,7 +18,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev":"vite"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.4",
