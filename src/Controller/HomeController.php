@@ -11,11 +11,16 @@ final class HomeController extends AbstractController
     #[Route('/', name: 'app_home')]
     public function index(): Response
     {
+        // données php destinées à mon component <Home/> sous forme de props 
+        $homeProps = [
+            'title' => 'Page Home React',
+            'username' => 'Julien',
+            'cityCount' => 123,
+        ];
 
-        //var_dump($_SERVER);
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
-            
+            'home_props' => $homeProps,
         ]);
     }
 }
