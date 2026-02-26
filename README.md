@@ -232,4 +232,4 @@ Ajoute ce script dans `package.json` si besoin:
 - Symfony rend la page Twig.
 - Twig expose des donnees JSON dans `data-*`.
 - `main.jsx` lit ces donnees et monte les composants React.
-- Vite gere HMR en dev et build optimise en prod.
+- Vite gere HMR en dev et build optimise en prod. 
