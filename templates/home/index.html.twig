@@ -5,5 +5,9 @@
 {% block body %}
 {# block d'insertion du component Home (le script est dans base.html.twig et main.jsx) #}
 {# passage des données php sous forme de dataset js (data-props) et encodées en json #}
-<div id="home" data-props='{{ home_props|json_encode|e('html_attr') }}'></div>
+<div id="home" 
+data-props='{{ home_props|json_encode|e('html_attr') }}'
+data-route="{{ path('app_truc') }}"
+></div>
+
 {% endblock %}

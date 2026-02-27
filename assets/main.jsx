@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./component/App";
 import Home from "./component/Home";
@@ -11,8 +11,9 @@ if (appContainer) {
 const homeContainer = document.getElementById("home");
 if (homeContainer) {
   let homeProps = {};
-  // recupération des données php json en dataset
+  // recuperation des donnees php json en dataset
   const rawProps = homeContainer.dataset.props;
+  const route = homeContainer.dataset.route;
 
   if (rawProps) {
     try {
@@ -21,6 +22,11 @@ if (homeContainer) {
       console.error("Props JSON invalide pour Home:", error);
     }
   }
-  // passage de données en props pures
+
+  if (route) {
+    homeProps.trucRoute = route;
+  }
+
+  // passage de donnees en props pures
   createRoot(homeContainer).render(<Home {...homeProps} />);
 }

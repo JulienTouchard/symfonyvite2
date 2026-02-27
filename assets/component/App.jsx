@@ -1,2 +1,10 @@
-const App = () => <div>Hello</div>;
+const App = () => {
+    return(
+        <>
+            <div>Hello</div>
+        </>
+    )
+
+
+};
 export default App;
